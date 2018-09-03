@@ -74,7 +74,8 @@ Java只支持类之间的单继承，但支持接口间的多继承。子类继�
 
 ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/io.jpeg)
 **_在使用流的时候必须确保在最后关闭流。_**
-`BufferedReader br = null;
+```
+         BufferedReader br = null;
          try{
              //open input stream
              br = new BufferedReader(new InputStreamReader(IOPractice.class.getResourceAsStream("io.txt"),"UTF-8"));
@@ -93,7 +94,8 @@ Java只支持类之间的单继承，但支持接口间的多继承。子类继�
                      e.printStackTrace();
                  }
              }
-         }`
+         }
+```
 
 ## 多线程
 
