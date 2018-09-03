@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9bfe1b7-f73a-44f7-859d-f980e8f7861d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/sean/java/concept/classPractice/Human.java" afterPath="$PROJECT_DIR$/src/com/sean/java/concept/classPractice/Person.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +17,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="292">
-                <caret line="82" column="41" lean-forward="false" selection-start-line="82" selection-start-column="41" selection-end-line="82" selection-end-column="41" />
+              <first_editor relative-caret-position="196">
+                <caret line="89" column="40" lean-forward="true" selection-start-line="89" selection-start-column="40" selection-end-line="89" selection-end-column="40" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -31,8 +29,8 @@
       <file leaf-file-name="Person.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sean/java/concept/classPractice/Person.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="58" selection-end-column="5" />
+            <state relative-caret-position="1545">
+              <caret line="103" column="4" lean-forward="false" selection-start-line="103" selection-start-column="4" selection-end-line="111" selection-end-column="5" />
               <folding>
                 <element signature="e#1176#1177#0" expanded="true" />
                 <element signature="e#1206#1207#0" expanded="true" />
@@ -440,8 +438,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sean/java/concept/classPractice/Person.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="58" selection-end-column="5" />
+        <state relative-caret-position="1545">
+          <caret line="103" column="4" lean-forward="false" selection-start-line="103" selection-start-column="4" selection-end-line="111" selection-end-column="5" />
           <folding>
             <element signature="e#1176#1177#0" expanded="true" />
             <element signature="e#1206#1207#0" expanded="true" />
@@ -474,8 +472,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="292">
-            <caret line="82" column="41" lean-forward="false" selection-start-line="82" selection-start-column="41" selection-end-line="82" selection-end-column="41" />
+          <first_editor relative-caret-position="196">
+            <caret line="89" column="40" lean-forward="true" selection-start-line="89" selection-start-column="40" selection-end-line="89" selection-end-column="40" />
             <folding />
           </first_editor>
           <second_editor />

@@ -86,6 +86,18 @@ public class Person {
 }
 ```
 
+```$xslt
+ public static void main(String[] args){
+         Person sean = new Person("male",33,162,60,"Sean");
+         sean.eat();
+         sean.sleep();
+ 
+         Person jany = new Person("female",24,168,50,"Jany");
+         jany.eat();
+         jany.sleep();
+ }
+```
+
 ## 封装
 将对象不需要让外界访问的成员变量和方法私有化，只提供符合开发者意愿的公共方法来访问这些数据和逻辑，保证了数据的安全和程序的稳定。封装以隐藏细节，数据安全和程序稳定为目的。
 
