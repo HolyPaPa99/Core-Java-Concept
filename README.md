@@ -23,6 +23,69 @@ Java 是面向对象的高级编程语言，类和对象是 Java 程序的构成
 ## 类
 对某类事物的普遍一致性特征和功能的抽象描述和封装，是构造对象的模板或蓝图。类之间主要有：依赖，聚合，继承等关系。
 
+例如：人的抽象，每个人都有性别，年龄，身高，体重和名字等属性。人会吃东西会睡觉。
+```$xslt
+
+/**
+ * person class
+ */
+public class Person {
+    /**
+     * the gender of this person
+     */
+    private String gender;
+    /**
+     * the age of this person
+     */
+    private int age;
+    /**
+     * the height of this person
+     */
+    private int height;
+    /**
+     * the weight of this person
+     */
+    private int weight;
+    /**
+     * the name of this person
+     */
+    private String name;
+
+    /**
+     * Constractor
+     * @param gender
+     * @param age
+     * @param high
+     * @param weight
+     * @param name
+     */
+    public Person(String gender, int age, int high, int weight, String name){
+        this.gender = gender;
+        this.age = age;
+        this.height = height;
+        this.weight = weight;
+        this.name = name;
+
+    }
+
+    /**
+     * person can eat
+     */
+    public void eat(){
+        System.out.println(this.name + "is eating...");
+
+    }
+
+    /**
+     * person can sleep
+     */
+    public void sleep(){
+        System.out.println(this.name + "is sleeping...");
+
+    }
+}
+```
+
 ## 封装
 将对象不需要让外界访问的成员变量和方法私有化，只提供符合开发者意愿的公共方法来访问这些数据和逻辑，保证了数据的安全和程序的稳定。封装以隐藏细节，数据安全和程序稳定为目的。
 

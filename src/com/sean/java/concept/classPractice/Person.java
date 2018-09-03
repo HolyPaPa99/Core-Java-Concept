@@ -1,9 +1,9 @@
 package com.sean.java.concept.classPractice;
 
 /**
- * human class
+ * person class
  */
-public class Human {
+public class Person {
     /**
      * the gender of this person
      */
@@ -33,7 +33,7 @@ public class Human {
      * @param weight
      * @param name
      */
-    public Human(String gender, int age, int high, int weight, String name){
+    public Person(String gender, int age, int high, int weight, String name){
         this.gender = gender;
         this.age = age;
         this.height = height;
@@ -43,7 +43,7 @@ public class Human {
     }
 
     /**
-     * human can eat
+     * person can eat
      */
     public void eat(){
         System.out.println(this.name + "is eating...");
@@ -51,7 +51,7 @@ public class Human {
     }
 
     /**
-     * human can sleep
+     * person can sleep
      */
     public void sleep(){
         System.out.println(this.name + "is sleeping...");
@@ -102,11 +102,11 @@ public class Human {
     }
 
     public static void main(String[] args){
-        Human sean = new Human("male",33,162,60,"Sean");
+        Person sean = new Person("male",33,162,60,"Sean");
         sean.eat();
         sean.sleep();
 
-        Human jany = new Human("female",24,168,50,"Jany");
+        Person jany = new Person("female",24,168,50,"Jany");
         jany.eat();
         jany.sleep();
     }
