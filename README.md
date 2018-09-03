@@ -72,9 +72,28 @@ Java只支持类之间的单继承，但支持接口间的多继承。子类继�
 
 结论：只要是处理纯文本数据，就优先考虑使用字符流。 除此之外都使用字节流。
 
-**_在使用流的时候必须确保在最后中关闭流。_**
 ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/io.jpeg)
-
+**_在使用流的时候必须确保在最后关闭流。_**
+`BufferedReader br = null;
+         try{
+             //open input stream
+             br = new BufferedReader(new InputStreamReader(IOPractice.class.getResourceAsStream("io.txt"),"UTF-8"));
+             String line = null;
+             while((line = br.readLine()) != null){
+                 System.out.println(line);
+             }
+         }catch(Exception e){
+             e.printStackTrace();
+         }finally{
+             if(br != null){
+                 try {
+                     //close input stream
+                     br.close();
+                 } catch (IOException e) {
+                     e.printStackTrace();
+                 }
+             }
+         }`
 
 ## 多线程
 
