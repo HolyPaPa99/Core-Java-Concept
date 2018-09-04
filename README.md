@@ -190,7 +190,7 @@ java程序经过一次编译之后，将java代码编译为字节码也就是cla
 例如我们有一个HelloWorld.java，执行这个程序的步骤如下，java通过jvm.cfg文件找到对应的jvm.dll，jvm.dll则是java虚拟机的主要实现。接下来会初始化JVM,并且获取JNI接口，什么是JNI接口，就是java本地接口，你想啊java被编译成了class文件，JVM怎么从硬盘上找到这个文件并装载到JVM里呢，就是通过JNI接口（它还常用于java与操作系统、硬件交互），找到class文件后并装载进JVM，然后找到main方法，最后执行。
 ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/executeclass.png)
 JVM基本结构：
-![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/jvmstructure.png)
+![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/jvm.png)
 JVM内存空间包含：方法区、java堆、java栈、本地方法栈。
 方法区是各个线程共享的区域，存放类信息、常量、静态变量。
 java堆也是线程共享的区域，我们的类的实例就放在这个区域，可以想象你的一个系统会产生很多实例，因此java堆的空间也是最大的。如果java堆空间不足了，程序会抛出OutOfMemoryError异常。
