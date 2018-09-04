@@ -206,5 +206,9 @@ JVM内存模型
 
 ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/memory.jpg)
 
+虚拟机内存模型中定义的访问操作与物理计算机处理的基本一致.
+
+Java中通过多线程机制使得多个任务同时执行处理，所有的线程共享JVM内存区域main memory，而每个线程又单独的有自己的工作内存，当线程与内存区域进行交互时，数据从主存拷贝到工作内存，进而交由线程处理（操作码+操作数）。
+
 ## 设计模式
 
