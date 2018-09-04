@@ -187,7 +187,8 @@ Java是一门解释性语言，宣传口号是：一次编译，到处运行。
 java程序经过一次编译之后，将java代码编译为字节码也就是class文件，然后在不同的操作系统上依靠不同的java虚拟机进行解释，最后再转换为不同平台的机器码，最终得到执行。这样我们是不是可以推演，如果要在mac系统上运行，是不是只需要安装mac java虚拟机就行了。
 ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/runanywhere.png)
 
-
+例如：我们有一个HelloWorld.java，执行这个程序的步骤如下，
+![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/executeclass.png)
 
 
 ## 设计模式
