@@ -204,7 +204,7 @@ JVM内存空间包含：方法区、java堆、java栈、本地方法栈。
 
 JVM内存模型
 
-![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/memory.png)
+![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/memory.jpg)
 
 ## 设计模式
 
