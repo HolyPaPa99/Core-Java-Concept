@@ -187,7 +187,7 @@ Java是一门解释性语言，宣传口号是：一次编译，到处运行。
 java程序经过一次编译之后，将java代码编译为字节码也就是class文件，然后在不同的操作系统上依靠不同的java虚拟机进行解释，最后再转换为不同平台的机器码，最终得到执行。这样我们是不是可以推演，如果要在mac系统上运行，是不是只需要安装mac java虚拟机就行了。
 ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/runanywhere.png)
 
-例如：我们有一个HelloWorld.java，执行这个程序的步骤如下，
+例如我们有一个HelloWorld.java，执行这个程序的步骤如下，java通过jvm.cfg文件找到对应的jvm.dll，jvm.dll则是java虚拟机的主要实现。接下来会初始化JVM,并且获取JNI接口，什么是JNI接口，就是java本地接口，你想啊java被编译成了class文件，JVM怎么从硬盘上找到这个文件并装载到JVM里呢，就是通过JNI接口（它还常用于java与操作系统、硬件交互），找到class文件后并装载进JVM，然后找到main方法，最后执行。
 ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/executeclass.png)
 
 
