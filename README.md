@@ -193,6 +193,7 @@ java程序经过一次编译之后，将java代码编译为字节码也就是cla
 JVM基本结构：
 
 ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/jvm.png)
+
 JVM内存空间包含：方法区、java堆、java栈、本地方法栈。
 方法区是各个线程共享的区域，存放类信息、常量、静态变量。
 java堆也是线程共享的区域，我们的类的实例就放在这个区域，可以想象你的一个系统会产生很多实例，因此java堆的空间也是最大的。如果java堆空间不足了，程序会抛出OutOfMemoryError异常。
