@@ -244,6 +244,10 @@ JVM内存空间包含：方法区、java堆、java栈、本地方法栈。
 
 ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/heap1.8.jpeg)
 
+>> 堆内存分配：
+
+>> VM初始分配的内存由-Xms指定，默认是物理内存的1/64；JVM最大分配的内存由-Xmx指 定，默认是物理内存的1/4。默认空余堆内存小于40%时，JVM就会增大堆直到-Xmx的最大限制；空余堆内存大于70%时，JVM会减少堆直到 -Xms的最小限制。因此服务器一般设置-Xms、-Xmx相等以避免在每次GC 后调整堆的大小。对象的堆内存由称为垃圾回收器的自动内存管理系统回收。 
+
 ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/heapinit.jpeg)
 
 
