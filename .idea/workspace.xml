@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9bfe1b7-f73a-44f7-859d-f980e8f7861d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/analyzeflow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/jvisualvm.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,8 +17,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="399">
-                <caret line="346" column="82" lean-forward="false" selection-start-line="346" selection-start-column="82" selection-end-line="346" selection-end-column="82" />
+              <first_editor relative-caret-position="565">
+                <caret line="375" column="79" lean-forward="false" selection-start-line="375" selection-start-column="79" selection-end-line="375" selection-end-column="79" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -478,8 +475,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="399">
-            <caret line="346" column="82" lean-forward="false" selection-start-line="346" selection-start-column="82" selection-end-line="346" selection-end-column="82" />
+          <first_editor relative-caret-position="565">
+            <caret line="375" column="79" lean-forward="false" selection-start-line="375" selection-start-column="79" selection-end-line="375" selection-end-column="79" />
             <folding />
           </first_editor>
           <second_editor />
