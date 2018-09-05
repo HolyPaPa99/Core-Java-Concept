@@ -280,7 +280,7 @@ JVM配置参数分为三类参数：跟踪参数、堆分配参数、栈分配�
 ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/outputgclog.png)
 >>>> 还有一个非常有用的参数，它可以把GC的日志记录到外部文件中，这在生产环境进行故障排查时尤为重要，当java程序出现OOM时，总希望看到当时垃圾回收的情况，通过这个参数就可以把GC的日志记录下来，便于排查问题，当然也可以做日常JVM监控
 >> * 监控类的加载，使用-XX:+TraceClassLoading。
-![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/classloadinglog.png)
+![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/classLoadingLog.png)
 
 
 #### 12.4.2 堆分配参数
@@ -317,6 +317,18 @@ JVM配置参数分为三类参数：跟踪参数、堆分配参数、栈分配�
 >>>>需要先安装：yum install sysstat   
 >> * jps：jdk自带的工具JPS直接找到java程序的进程号。
 >> * jstat：jdk自带的工具用于输出java程序内存使用情况，包括新生代、老年代、元数据区容量、垃圾回收情况。
+![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/jstat.png)
+>>>> 上述命令输出进程ID为3618的内存使用情况（每2000毫秒输出一次，一共输出20次）
+>>>>> S0：幸存1区当前使用比例
+>>>>> S1：幸存2区当前使用比例
+>>>>> E：伊甸园区使用比例
+>>>>> O：老年代使用比例
+>>>>> M：元数据区使用比例
+>>>>> CCS：压缩使用比例
+>>>>> YGC：年轻代垃圾回收次数
+>>>>> FGC：老年代垃圾回收次数
+>>>>> FGCT：老年代垃圾回收消耗时间
+>>>>> GCT：垃圾回收消耗总时间
 >> * jmap：jdk自带的工具用于输出java程序中内存对象的情况，包括有哪些对象，对象的数量。
 >> * jstack：jdk自带的工具用户输出java程序线程栈的情况，常用于定位因为某些线程问题造成的故障或性能问题。    
 
