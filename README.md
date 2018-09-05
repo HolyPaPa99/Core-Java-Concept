@@ -288,21 +288,20 @@ JVM配置参数分为三类参数：跟踪参数、堆分配参数、栈分配�
 >> * 堆最大大小：Xmx
 >> * 新生代内存大小：Xmn
 >>>> -Xmn2g：设置新生代大小为2G。在整个堆内存大小确定的情况下，增大新生代将会减小年老代，反之亦然。此值关系到JVM垃圾回收，对系统性能影响较大，官方推荐配置为整个堆大小的3/8。
->> * 新生代（eden+from+to）和老年代（不包含永久区）的比值：-XX:NewRatio
 >> * -XX:NewSize=1024m：设置新生代初始值为1024M。
 >> * -XX:MaxNewSize=1024m：设置新生代最大值为1024M。
->>>> 推荐使用-Xmn参数，原因是这个参数简洁，相当于一次设定 NewSize/MaxNewSIze，而且两者相等，适用于生产环境。-Xmn 配合-Xms/-Xmx，即可将堆内存布局完成。
->>>> -Xmn参数是在JDK 1.4 开始支持。
-
+>>>> 推荐使用-Xmn参数，原因是这个参数简洁，相当于一次设定 NewSize/MaxNewSIze，而且两者相等，适用于生产环境。-Xmn 配合-Xms/-Xmx，即可将堆内存布局完成。-Xmn参数是在JDK 1.4 开始支持。
+>> * 新生代（eden+from+to）和老年代（不包含永久区）的比值：-XX:NewRatio
+>>>> -Xmn，-XX:NewSize/-XX:MaxNewSize，-XX:NewRatio3组参数都可以影响新生代的大小，混合使用的情况下，优先级是什么？如下：
+>>>> * 高优先级：-XX:NewSize/-XX:MaxNewSize 
+>>>> * 中优先级：-Xmn（默认等效  -Xmn=-XX:NewSize=-XX:MaxNewSize=?） 
+>>>> * 低优先级：-XX:NewRatio 
 >> * Eden区与Survivor区（from、to）的大小比值：-XX:SurvivorRatio
 >> * 在发生OOM异常时把堆栈信息打印到外部文件:-XX:+HeapDumpOnOutOfMemoryError、-XX:+HeapDumpPath
 >> * 永久区分配参数:-XX:PermSize -XX:MaxPermSize
 >>>> 用于设置永久区的初始空间和最大空间，他们表示一个系统可以容纳多少个类型，一般空间比较小。在java1.8以后，永久区被移到了元数据区，使用本地内存，所以这两个参数也不建议再使用。
 
->>>> -Xmn，-XX:NewSize/-XX:MaxNewSize，-XX:NewRatio3组参数都可以影响新生代的大小，混合使用的情况下，优先级是什么？如下：
->>>> * 高优先级：-XX:NewSize/-XX:MaxNewSize 
->>>> * 中优先级：-Xmn（默认等效  -Xmn=-XX:NewSize=-XX:MaxNewSize=?） 
->>>> * 低优先级：-XX:NewRatio 
+
 
 总结：
 >> 根据实际事情调整新生代和幸存代的大小,官方推荐新生代占堆的3/8,幸存代占新生代的1/10;在OOM时，记得Dump出堆，确保可以排查现场问题。
