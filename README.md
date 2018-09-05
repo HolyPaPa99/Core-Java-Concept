@@ -291,6 +291,9 @@ JVM配置参数分为三类参数：跟踪参数、堆分配参数、栈分配�
 >> * 新生代（eden+from+to）和老年代（不包含永久区）的比值：-XX:NewRatio
 >> * -XX:NewSize=1024m：设置新生代初始值为1024M。
 >> * -XX:MaxNewSize=1024m：设置新生代最大值为1024M。
+>>>> 推荐使用-Xmn参数，原因是这个参数简洁，相当于一次设定 NewSize/MaxNewSIze，而且两者相等，适用于生产环境。-Xmn 配合-Xms/-Xmx，即可将堆内存布局完成。
+>>>> -Xmn参数是在JDK 1.4 开始支持。
+
 >> * Eden区与Survivor区（from、to）的大小比值：-XX:SurvivorRatio
 >> * 在发生OOM异常时把堆栈信息打印到外部文件:-XX:+HeapDumpOnOutOfMemoryError、-XX:+HeapDumpPath
 >> * 永久区分配参数:-XX:PermSize -XX:MaxPermSize
@@ -300,9 +303,6 @@ JVM配置参数分为三类参数：跟踪参数、堆分配参数、栈分配�
 >>>> * 高优先级：-XX:NewSize/-XX:MaxNewSize 
 >>>> * 中优先级：-Xmn（默认等效  -Xmn=-XX:NewSize=-XX:MaxNewSize=?） 
 >>>> * 低优先级：-XX:NewRatio 
->>>> 推荐使用-Xmn参数，原因是这个参数简洁，相当于一次设定 NewSize/MaxNewSIze，而且两者相等，适用于生产环境。-Xmn 配合-Xms/-Xmx，即可将堆内存布局完成。
-
--Xmn参数是在JDK 1.4 开始支持。
 
 总结：
 >> 根据实际事情调整新生代和幸存代的大小,官方推荐新生代占堆的3/8,幸存代占新生代的1/10;在OOM时，记得Dump出堆，确保可以排查现场问题。
