@@ -332,12 +332,19 @@ JVM配置参数分为三类参数：跟踪参数、堆分配参数、栈分配�
 >> * jmap：jdk自带的工具用于输出java程序中内存对象的情况，包括有哪些对象，对象的数量。
 >>>> 常用的方式是将指定进程的内存heap输出到外部文件，再由专门的heap分析工具进行分析,例如mat（Memory Analysis Tool），所以我们常用的命令是：
 >>>> jmap -dump:live,format=b,file=heap.hprof 3618
->>>> 将heap.hprof传输出来到window电脑上使用mat工具分析：
+>>>> 将heap.hprof传输出来到window电脑上使用mat(如：MemoryAnalyzer)工具分析：
 ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/jmap.png)
 >> * jstack：jdk自带的工具用户输出java程序线程栈的情况，常用于定位因为某些线程问题造成的故障或性能问题。    
 >>>> jstack 3618 > jstack.out
 >>>> 上述命令将进程ID为3618的栈信息输出到外部文件，便于传输到windows电脑上进行分析。
 
+#### 12.6.2 Windows系统监控 工具
+>> * jvisualvm.exe:JDK自带工具
+![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/jvisualvm.png)
+>> * MemoryAnalyzer.exe
+
+一般故障排查流程：
+![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/analyzeflow.png)
 
 ## 13.设计模式
 
