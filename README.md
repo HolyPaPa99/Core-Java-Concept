@@ -206,10 +206,40 @@ JVM基本结构：
 
 JVM内存空间包含：方法区、java堆、java栈、本地方法栈。
 * 方法区是各个线程共享的区域，存放类信息、常量、静态变量。
-* java堆也是线程共享的区域，我们的类的实例就放在这个区域，可以想象你的一个系统会产生很多实例，因此java堆的空间也是最大的。如果java堆空间不足了，程序会抛出OutOfMemoryError异常。
+* 堆这块区域是JVM中最大的，应用的对象和数据都是存在这个区域，这块区域也是线程共享的，也是 gc 主要的回收区，一个 JVM 实例只存在一个堆类存，堆内存的大小是可以调节的。类加载器读取了类文件后，需要把类、方法、常变量放到堆内存中，以方便执行器执行，堆内存分为三部分：新生区、养老区、永久区/元空间
 
 ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/heap.jpeg)
+① 新生区
 
+新生区是类的诞生、成长、消亡的区域，一个类在这里产生，应用，最后被垃圾回收器收集，结束生命。新生区又分为两部分：伊甸区（Eden space）和幸存者区（Survivor pace），所有的类都是在伊甸区被new出来的。幸存区有两个：0区（Survivor 0 space）和1区（Survivor 1 space）。当伊甸园的空间用完时，程序又需要创建对象，JVM的垃圾回收器将对伊甸园进行垃圾回收（Minor GC）,将伊甸园中的剩余对象移动到幸存0区。若幸存0区也满了，再对该区进行垃圾回收，然后移动到1区。那如果1去也满了呢？再移动到养老区。若养老区也满了，那么这个时候将产生Major GC（FullGCC），进行养老区的内存清理。若养老区执行Full GC 之后发现依然无法进行对象的保存，就会产生OOM异常“OutOfMemoryError”。
+
+如果出现java.lang.OutOfMemoryError: Java heap space异常，说明Java虚拟机的堆内存不够。原因有二：
+
+a.Java虚拟机的堆内存设置不够，可以通过参数-Xms、-Xmx来调整。
+
+b.代码中创建了大量大对象，并且长时间不能被垃圾收集器收集（存在被引用）。
+
+② 养老区
+
+养老区用于保存从新生区筛选出来的 JAVA 对象，一般池对象都在这个区域活跃。
+
+③ 永久区
+
+永久存储区是一个常驻内存区域，用于存放JDK自身所携带的 Class,Interface 的元数据，也就是说它存储的是运行环境必须的类信息，被装载进此区域的数据是不会被垃圾回收器回收掉的，关闭 JVM 才会释放此区域所占用的内存。
+
+如果出现java.lang.OutOfMemoryError: PermGen space，说明是Java虚拟机对永久代Perm内存设置不够。原因有二：
+
+a. 程序启动需要加载大量的第三方jar包。例如：在一个Tomcat下部署了太多的应用。
+
+b. 大量动态反射生成的类不断被加载，最终导致Perm区被占满。
+
+说明：
+
+Jdk1.6及之前：常量池分配在永久代 。
+
+Jdk1.7：有，但已经逐步“去永久代” 。
+
+Jdk1.8及之后：无(java.lang.OutOfMemoryError: PermGen space,这种错误将不会出现在JDK1.8中)。
 
 ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/heap1.8.jpeg)
 
