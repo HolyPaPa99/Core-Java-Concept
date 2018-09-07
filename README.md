@@ -340,7 +340,21 @@ JDK5.0以后每个线程栈大小为1M，之前每个线程栈大小为256K。�
 
 >>>> 2、我们注意到对象被清除之后，被清除的对象留下内存的空缺位置，造成内存不连续，空间浪费。
 
+>> * 标记压缩
+>>>> 标记压缩算法你可能已经想到了，它就是在标记清除算法的基础上，增加了压缩过程。
+![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/stress.png)
+>>>> 在进行完标记清除之后，对内存空间进行压缩，节省内存空间，解决了标记清除算法内存不连续的问题。
 
+>>>> 注意标记压缩算法也会产生“stop the world”，不能和java程序并发执行。在压缩过程中一些对象内存地址会发生改变，java程序只能等待压缩完成后才能继续。
+
+>> * 复制算法
+>>>> 复制算法简单来说就是把内存一分为二，但只使用其中一份，在垃圾回收时，将正在使用的那份内存中存活的对象复制到另一份空白的内存中，最后将正在使用的内存空间的对象清除，完成垃圾回收。
+![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/copy1.png)
+![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/copy2.png)
+![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/copy3.png)
+![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/copy4.png)
+
+>>>> 复制算法相对标记压缩算法来说更简洁高效，但它的缺点也显而易见，它不适合用于存活对象多的情况，因为那样需要复制的对象很多，复制性能较差，所以复制算法往往用于内存空间中新生代的垃圾回收，因为新生代中存活对象较少，复制成本较低。它另外一个缺点是内存空间占用成本高，因为它基于两份内存空间做对象复制，在非垃圾回收的周期内只用到了一份内存空间，内存利用率较低。
 
 JVM给出了3种选择：串行收集器、并行收集器、并发收集器。串行收集器只适用于小数据量的情况，所以生产环境的选择主要是并行收集器和并发收集器。
 默认情况下JDK5.0以前都是使用串行收集器，如果想使用其他收集器需要在启动时加入相应参数。JDK5.0以后，JVM会根据当前系统配置进行智能判断。
