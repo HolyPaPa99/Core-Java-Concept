@@ -145,6 +145,16 @@ Class c2 = Person.class;
 Class c3 = Class.forName("com.ys.reflex.Person");
 ```
 
+通过 Class 类获取成员变量、成员方法、接口、超类、构造方法等:
+>> * getName()：获得类的完整名字。
+>> * getFields()：获得类的public类型的属性。
+>> * getDeclaredFields()：获得类的所有属性。包括private 声明的和继承类
+>> * getMethods()：获得类的public类型的方法。
+>> * getDeclaredMethods()：获得类的所有方法。包括private 声明的和继承类
+>> * getMethod(String name, Class[] parameterTypes)：获得类的特定方法，name参数指定方法的名字，parameterTypes 参数指定方法的参数类型。
+>> * getConstructors()：获得类的public类型的构造方法。
+>> * getConstructor(Class[] parameterTypes)：获得类的特定构造方法，parameterTypes 参数指定构造方法的参数类型。
+>> * newInstance()：通过类的不带参数的构造方法创建这个类的一个对象。
 
 ## 8 面向接口编程
 面向接口编程是指在面向对向系统中所有的类或模块之间的交互由接口来完成。面向接口编程大大的降低了类之间的耦合度提高程序的扩展性。接口和实现分离了，适于团队的协作开发。 接口本质上就是由制定者来协调实现者和调用者之间的关系。 只有实现者和调用者都遵循“面向接口编程”这个准则，制定者的协调目的才能达到。 
