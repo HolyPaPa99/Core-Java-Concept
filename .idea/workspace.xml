@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e9bfe1b7-f73a-44f7-859d-f980e8f7861d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sean/java/concept/reflect/ReflectTest.java" afterPath="$PROJECT_DIR$/src/com/sean/java/concept/reflect/ReflectTest.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,8 +17,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="279">
-                <caret line="191" column="8" lean-forward="false" selection-start-line="191" selection-start-column="8" selection-end-line="191" selection-end-column="8" />
+              <first_editor relative-caret-position="474">
+                <caret line="611" column="5" lean-forward="false" selection-start-line="611" selection-start-column="5" selection-end-line="611" selection-end-column="5" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -515,8 +514,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="279">
-            <caret line="191" column="8" lean-forward="false" selection-start-line="191" selection-start-column="8" selection-end-line="191" selection-end-column="8" />
+          <first_editor relative-caret-position="474">
+            <caret line="611" column="5" lean-forward="false" selection-start-line="611" selection-start-column="5" selection-end-line="611" selection-end-column="5" />
             <folding />
           </first_editor>
           <second_editor />
