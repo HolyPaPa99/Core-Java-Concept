@@ -3,6 +3,8 @@ package com.sean.java.concept.reflect;
 import com.sean.java.concept.classPractice.Person;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 public class ReflectTest {
     /**
@@ -20,14 +22,45 @@ public class ReflectTest {
         }
     }
     public static void getFields(){
+        try {
+            Class clazz = Person.class;
+            Field[] fields = clazz.getDeclaredFields();
+            for(Field field : fields){
+                System.out.println(field.getName());
+            }
+            Field nameField = clazz.getDeclaredField("name");
+            nameField.setAccessible(true);
+            Person person = (Person)clazz.newInstance();
+            nameField.set(person,"sean");
+            Object name = nameField.get(person);
+            System.out.println("name:"+name);
 
+        }catch(Exception e){
+            e.printStackTrace();
+        }
 
     }
     public static void getMethod(){
+        try {
+            Class clazz = Person.class;
+            Method[] methods = clazz.getDeclaredMethods();
+            for(Method method : methods){
+                System.out.println(method.getName());
+            }
+            Method setName = clazz.getMethod("setName",String.class);
+            Person person = (Person)clazz.newInstance();
+            setName.invoke(person,"Sean");
+            System.out.println("name:"+person.getName());
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
 
     }
     public static void main(String[] args){
         getConstructor();
+        getFields();
+        getMethod();
     }
 
 }

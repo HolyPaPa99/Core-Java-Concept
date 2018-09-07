@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9bfe1b7-f73a-44f7-859d-f980e8f7861d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/sean/java/concept/reflect/ReflectTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/production/Core-Java-Concept/com/sean/java/concept/classPractice/Human.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/production/Core-Java-Concept/com/sean/java/concept/ioPractice/IOPractice.class" afterPath="$PROJECT_DIR$/target/classes/production/Core-Java-Concept/com/sean/java/concept/ioPractice/IOPractice.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sean/java/concept/classPractice/Person.java" afterPath="$PROJECT_DIR$/src/com/sean/java/concept/classPractice/Person.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/sean/java/concept/reflect/ReflectTest.java" afterPath="$PROJECT_DIR$/src/com/sean/java/concept/reflect/ReflectTest.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,8 +18,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="444">
-                <caret line="166" column="25" lean-forward="true" selection-start-line="166" selection-start-column="25" selection-end-line="166" selection-end-column="25" />
+              <first_editor relative-caret-position="279">
+                <caret line="191" column="8" lean-forward="false" selection-start-line="191" selection-start-column="8" selection-end-line="191" selection-end-column="8" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -34,7 +30,7 @@
       <file leaf-file-name="Person.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sean/java/concept/classPractice/Person.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
+            <state relative-caret-position="686">
               <caret line="111" column="56" lean-forward="true" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="56" />
               <folding>
                 <element signature="e#1244#1245#0" expanded="true" />
@@ -63,12 +59,10 @@
       <file leaf-file-name="ReflectTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sean/java/concept/reflect/ReflectTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="19" selection-end-column="9" />
+            <state relative-caret-position="333">
+              <caret line="56" column="9" lean-forward="true" selection-start-line="43" selection-start-column="8" selection-end-line="56" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#853#854#0" expanded="true" />
-                <element signature="e#885#886#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -477,7 +471,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sean/java/concept/classPractice/Person.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
+        <state relative-caret-position="686">
           <caret line="111" column="56" lean-forward="true" selection-start-line="111" selection-start-column="33" selection-end-line="111" selection-end-column="56" />
           <folding>
             <element signature="e#1244#1245#0" expanded="true" />
@@ -504,12 +498,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sean/java/concept/reflect/ReflectTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="19" selection-end-column="9" />
+        <state relative-caret-position="333">
+          <caret line="56" column="9" lean-forward="true" selection-start-line="43" selection-start-column="8" selection-end-line="56" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
-            <element signature="e#885#886#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -523,8 +515,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="444">
-            <caret line="166" column="25" lean-forward="true" selection-start-line="166" selection-start-column="25" selection-end-line="166" selection-end-column="25" />
+          <first_editor relative-caret-position="279">
+            <caret line="191" column="8" lean-forward="false" selection-start-line="191" selection-start-column="8" selection-end-line="191" selection-end-column="8" />
             <folding />
           </first_editor>
           <second_editor />

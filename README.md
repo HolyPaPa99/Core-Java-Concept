@@ -168,6 +168,43 @@ Class c3 = Class.forName("com.ys.reflex.Person");
             e.printStackTrace();
         }
 ```
+获取field:
+```$xslt
+        try {
+            Class clazz = Person.class;
+            Field[] fields = clazz.getDeclaredFields();
+            for(Field field : fields){
+                System.out.println(field.getName());
+            }
+            Field nameField = clazz.getDeclaredField("name");
+            nameField.setAccessible(true);
+            Person person = (Person)clazz.newInstance();
+            nameField.set(person,"sean");
+            Object name = nameField.get(person);
+            System.out.println("name:"+name);
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+```
+获取method并执行：
+```$xslt
+        try {
+            Class clazz = Person.class;
+            Method[] methods = clazz.getDeclaredMethods();
+            for(Method method : methods){
+                System.out.println(method.getName());
+            }
+            Method setName = clazz.getMethod("setName",String.class);
+            Person person = (Person)clazz.newInstance();
+            setName.invoke(person,"Sean");
+            System.out.println("name:"+person.getName());
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+```
+
 
 ## 8 面向接口编程
 面向接口编程是指在面向对向系统中所有的类或模块之间的交互由接口来完成。面向接口编程大大的降低了类之间的耦合度提高程序的扩展性。接口和实现分离了，适于团队的协作开发。 接口本质上就是由制定者来协调实现者和调用者之间的关系。 只有实现者和调用者都遵循“面向接口编程”这个准则，制定者的协调目的才能达到。 
