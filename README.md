@@ -654,6 +654,11 @@ public class FactoryPatternDemo {
 ```
 
 >> * 抽象工厂模式（Abstract Factory Pattern）
+>>>> 当系统的产品有多于一个的产品族而系统只消费其中某一族的产品时，
+
+>>>> ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/abstractfactory.jpg)
+
+
 >> * 单例模式（Singleton Pattern）
 >> * 建造者模式（Builder Pattern）
 >> * 原型模式（Prototype Pattern）
