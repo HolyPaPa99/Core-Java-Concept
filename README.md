@@ -578,7 +578,80 @@ J2EE模式（8种）：MVC 模式、业务代表模式、组合实体模式、�
 这些设计模式提供了一种在创建对象的同时隐藏创建逻辑的方式，而不是使用 new 运算符直接实例化对象。这使得程序在判断针对某个给定实例需要创建哪些对象时更加灵活。
 >> * 工厂模式（Factory Pattern）
 >>>> 常用的工厂模式是静态工厂，利用static方法，作为一种类似于常见的工具类Utils等辅助效果，一般情况下工厂类不需要实例化。
+
 >>>> ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/factory.jpg)
+
+```$xslt
+public interface Shape {
+   void draw();
+}
+
+public class Rectangle implements Shape {
+ 
+   @Override
+   public void draw() {
+      System.out.println("Inside Rectangle::draw() method.");
+   }
+}
+
+public class Square implements Shape {
+ 
+   @Override
+   public void draw() {
+      System.out.println("Inside Square::draw() method.");
+   }
+}
+
+public class Circle implements Shape {
+ 
+   @Override
+   public void draw() {
+      System.out.println("Inside Circle::draw() method.");
+   }
+}
+
+public class ShapeFactory {
+    
+   //使用 getShape 方法获取形状类型的对象
+   public static Shape getShape(String shapeType){
+      if(shapeType == null){
+         return null;
+      }        
+      if(shapeType.equalsIgnoreCase("CIRCLE")){
+         return new Circle();
+      } else if(shapeType.equalsIgnoreCase("RECTANGLE")){
+         return new Rectangle();
+      } else if(shapeType.equalsIgnoreCase("SQUARE")){
+         return new Square();
+      }
+      return null;
+   }
+}
+
+public class FactoryPatternDemo {
+ 
+   public static void main(String[] args) {
+
+      //获取 Circle 的对象，并调用它的 draw 方法
+      Shape shape1 = ShapeFactory.getShape("CIRCLE");
+ 
+      //调用 Circle 的 draw 方法
+      shape1.draw();
+ 
+      //获取 Rectangle 的对象，并调用它的 draw 方法
+      Shape shape2 = ShapeFactory.getShape("RECTANGLE");
+ 
+      //调用 Rectangle 的 draw 方法
+      shape2.draw();
+ 
+      //获取 Square 的对象，并调用它的 draw 方法
+      Shape shape3 = ShapeFactory.getShape("SQUARE");
+ 
+      //调用 Square 的 draw 方法
+      shape3.draw();
+   }
+}
+```
 
 >> * 抽象工厂模式（Abstract Factory Pattern）
 >> * 单例模式（Singleton Pattern）
