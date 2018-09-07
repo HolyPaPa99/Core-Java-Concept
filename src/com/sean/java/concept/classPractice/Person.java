@@ -26,14 +26,21 @@ public class Person {
     private String name;
 
     /**
+     * constructor
+     */
+    public Person(){
+
+    }
+
+    /**
      * Constractor
      * @param gender
      * @param age
-     * @param high
+     * @param height
      * @param weight
      * @param name
      */
-    public Person(String gender, int age, int high, int weight, String name){
+    public Person(String gender, int age, int height, int weight, String name){
         this.gender = gender;
         this.age = age;
         this.height = height;
@@ -69,12 +76,12 @@ public class Person {
         this.age = age;
     }
 
-    public int getHigh() {
+    public int getHeight() {
         return height;
     }
 
-    public void setHigh(int high) {
-        this.height = high;
+    public void setHeight(int height) {
+        this.height = height;
     }
 
     public int getWeight() {
@@ -105,6 +112,7 @@ public class Person {
         Person sean = new Person("male",33,162,60,"Sean");
         sean.eat();
         sean.sleep();
+
 
         Person jany = new Person("female",24,168,50,"Jany");
         jany.eat();

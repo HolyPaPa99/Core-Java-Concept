@@ -156,6 +156,19 @@ Class c3 = Class.forName("com.ys.reflex.Person");
 >> * getConstructor(Class[] parameterTypes)：获得类的特定构造方法，parameterTypes 参数指定构造方法的参数类型。
 >> * newInstance()：通过类的不带参数的构造方法创建这个类的一个对象。
 
+获取constructor：
+```$xslt
+        try {
+            Class clazz = Person.class;
+            Constructor<Person> constructor1 = clazz.getConstructor();
+            Constructor<Person> constructor2 = clazz.getConstructor(String.class, int.class, int.class, int.class, String.class);
+            Person person1 = constructor1.newInstance();
+            Person person2 = constructor2.newInstance("male",33,162,60,"Sean");
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+```
+
 ## 8 面向接口编程
 面向接口编程是指在面向对向系统中所有的类或模块之间的交互由接口来完成。面向接口编程大大的降低了类之间的耦合度提高程序的扩展性。接口和实现分离了，适于团队的协作开发。 接口本质上就是由制定者来协调实现者和调用者之间的关系。 只有实现者和调用者都遵循“面向接口编程”这个准则，制定者的协调目的才能达到。 
 
