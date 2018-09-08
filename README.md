@@ -266,6 +266,13 @@ Class c3 = Class.forName("com.ys.reflex.Person");
 
 ## 10 多线程
 
+### 10.1 继承Thread类
+创建 Thread 子类的一个实例并重写 run 方法，run 方法会在调用 start()方法之后被执行。
+
+### 10.2 实现Runnable接口
+新建一个实现了 java.lang.Runnable 接口的类的实例，实例中的方法可以被线程调用。为了使线程能够执行 run()方法，需要在 Thread 类的构造函数中传入 MyRunnable 的实例对象。
+
+
 
 ## 11 Tcp/IP
 
