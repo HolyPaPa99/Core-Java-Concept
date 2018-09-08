@@ -734,6 +734,10 @@ public class ShapeCache {
 >> * 过滤器模式（Filter、Criteria Pattern）
 >> * 组合模式（Composite Pattern）
 >> * 装饰器模式（Decorator Pattern）
+>>>> 装饰器模式（Decorator Pattern）允许向一个现有的对象添加新的功能，同时又不改变其结构。
+
+>>>> ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/decorator_pattern_uml_diagram.jpg)
+
 >> * 外观模式（Facade Pattern）
 >> * 享元模式（Flyweight Pattern）
 >> * 代理模式（Proxy Pattern）
