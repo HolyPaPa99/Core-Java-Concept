@@ -684,6 +684,38 @@ public class Singleton {
 >>>> 我们将创建一个抽象类 Shape 和扩展了 Shape 类的实体类。下一步是定义类 ShapeCache，该类把 shape 对象存储在一个 Hashtable 中，并在请求的时候返回它们的克隆。
 
 >>>> ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/prototype_pattern_uml_diagram.jpg)
+```$xslt
+import java.util.Hashtable;
+ 
+public class ShapeCache {
+    
+   private static Hashtable<String, Shape> shapeMap 
+      = new Hashtable<String, Shape>();
+ 
+   public static Shape getShape(String shapeId) {
+      Shape cachedShape = shapeMap.get(shapeId);
+      return (Shape) cachedShape.clone();
+   }
+ 
+   // 对每种形状都运行数据库查询，并创建该形状
+   // shapeMap.put(shapeKey, shape);
+   // 例如，我们要添加三种形状
+   public static void loadCache() {
+      Circle circle = new Circle();
+      circle.setId("1");
+      shapeMap.put(circle.getId(),circle);
+ 
+      Square square = new Square();
+      square.setId("2");
+      shapeMap.put(square.getId(),square);
+ 
+      Rectangle rectangle = new Rectangle();
+      rectangle.setId("3");
+      shapeMap.put(rectangle.getId(),rectangle);
+   }
+}
+
+```
 
 #### 13.1.2 结构型模式
 这些设计模式关注类和对象的组合。继承的概念被用来组合接口和定义组合对象获得新功能的方式。
