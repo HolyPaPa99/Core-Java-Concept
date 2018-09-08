@@ -679,6 +679,11 @@ public class Singleton {
 >>>> ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/builder_pattern_uml_diagram.jpg)
 
 >> * 原型模式（Prototype Pattern）
+>>>> 原型模式（Prototype Pattern）是用于创建重复的对象，同时又能保证性能。用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。
+
+>>>> 我们将创建一个抽象类 Shape 和扩展了 Shape 类的实体类。下一步是定义类 ShapeCache，该类把 shape 对象存储在一个 Hashtable 中，并在请求的时候返回它们的克隆。
+
+>>>> ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/prototype_pattern_uml_diagram.jpg)
 
 #### 13.1.2 结构型模式
 这些设计模式关注类和对象的组合。继承的概念被用来组合接口和定义组合对象获得新功能的方式。

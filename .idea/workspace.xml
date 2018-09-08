@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9bfe1b7-f73a-44f7-859d-f980e8f7861d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/builder_pattern_uml_diagram.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/prototype_pattern_uml_diagram.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +18,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="269">
-                <caret line="678" column="83" lean-forward="false" selection-start-line="678" selection-start-column="83" selection-end-line="678" selection-end-column="83" />
+              <first_editor relative-caret-position="313">
+                <caret line="685" column="85" lean-forward="false" selection-start-line="685" selection-start-column="85" selection-end-line="685" selection-end-column="85" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -520,8 +520,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="269">
-            <caret line="678" column="83" lean-forward="false" selection-start-line="678" selection-start-column="83" selection-end-line="678" selection-end-column="83" />
+          <first_editor relative-caret-position="313">
+            <caret line="685" column="85" lean-forward="false" selection-start-line="685" selection-start-column="85" selection-end-line="685" selection-end-column="85" />
             <folding />
           </first_editor>
           <second_editor />
