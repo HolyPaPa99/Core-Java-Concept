@@ -759,6 +759,20 @@ public class ShapeCache {
 >> * 中介者模式（Mediator Pattern）
 >> * 备忘录模式（Memento Pattern）
 >> * 观察者模式（Observer Pattern）
+>>>> 当对象间存在一对多关系时，则使用观察者模式（Observer Pattern）。比如，当一个对象被修改时，则会自动通知它的依赖对象。观察者模式属于行为型模式。
+     
+>>>> 注意事项： 
+
+>>>> 1、JAVA 中已经有了对观察者模式的支持类。
+ 
+>>>> 2、避免循环引用。 
+
+>>>> 3、如果顺序执行，某一观察者错误会导致系统卡壳，一般采用异步方式。
+
+>>>> 观察者模式使用三个类 Subject、Observer 和 Client。Subject 对象带有绑定观察者到 Client 对象和从 Client 对象解绑观察者的方法。我们创建 Subject 类、Observer 抽象类和扩展了抽象类 Observer 的实体类。
+
+>>>> ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/observer_pattern_uml_diagram.jpg)
+
 >> * 状态模式（State Pattern）
 >> * 空对象模式（Null Object Pattern）
 >> * 策略模式（Strategy Pattern）
