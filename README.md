@@ -593,12 +593,85 @@ J2EE模式（8种）：MVC 模式、业务代表模式、组合实体模式、�
 
 >> * 单例模式（Singleton Pattern）
 >>>> 保证一个类仅有一个实例，并提供一个访问它的全局访问点。
+
 >>>> 注意：
 >>>> * 1、单例类只能有一个实例。
 >>>> * 2、单例类必须自己创建自己的唯一实例。
 >>>> * 3、单例类必须给所有其他对象提供这一实例。
+
 >>>> ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/singleton_pattern_uml_diagram.jpg)
 
+>>>> 单例模式的几种实现方式:
+
+>>>> * 懒汉式，线程不安全
+```$xslt
+public class Singleton {  
+    private static Singleton instance;  
+    private Singleton (){}  
+  
+    public static Singleton getInstance() {  
+    if (instance == null) {  
+        instance = new Singleton();  
+    }  
+    return instance;  
+    }  
+}
+```
+>>>> * 懒汉式，线程安全
+```$xslt
+public class Singleton {  
+    private static Singleton instance;  
+    private Singleton (){}  
+    public static synchronized Singleton getInstance() {  
+    if (instance == null) {  
+        instance = new Singleton();  
+    }  
+    return instance;  
+    }  
+}
+```
+>>>> * 饿汉式，线程安全
+```$xslt
+public class Singleton {  
+    private static Singleton instance = new Singleton();  
+    private Singleton (){}  
+    public static Singleton getInstance() {  
+    return instance;  
+    }  
+}
+```
+>>>> * 双检锁/双重校验锁（DCL，即 double-checked locking），线程安全
+```$xslt
+public class Singleton {  
+    private volatile static Singleton singleton;  
+    private Singleton (){}  
+    public static Singleton getSingleton() {  
+    if (singleton == null) {  
+        synchronized (Singleton.class) {  
+        if (singleton == null) {  
+            singleton = new Singleton();  
+        }  
+        }  
+    }  
+    return singleton;  
+    }  
+}
+```
+>>>> * 登记式/静态内部类,线程安全
+```$xslt
+public class Singleton {  
+    private static class SingletonHolder {  
+    private static final Singleton INSTANCE = new Singleton();  
+    }  
+    private Singleton (){}  
+    public static final Singleton getInstance() {  
+    return SingletonHolder.INSTANCE;  
+    }  
+}
+```
+
+>>>> * 枚举
+>>>> 这种实现方式还没有被广泛采用，但这是实现单例模式的最佳方法。它更简洁，自动支持序列化机制，绝对防止多次实例化。
 
 >> * 建造者模式（Builder Pattern）
 >> * 原型模式（Prototype Pattern）

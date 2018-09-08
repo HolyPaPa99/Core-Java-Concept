@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9bfe1b7-f73a-44f7-859d-f980e8f7861d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/singleton_pattern_uml_diagram.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +17,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="435">
-                <caret line="599" column="109" lean-forward="false" selection-start-line="599" selection-start-column="109" selection-end-line="599" selection-end-column="109" />
+              <first_editor relative-caret-position="355">
+                <caret line="673" column="60" lean-forward="false" selection-start-line="673" selection-start-column="60" selection-end-line="673" selection-end-column="60" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -520,8 +519,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="435">
-            <caret line="599" column="109" lean-forward="false" selection-start-line="599" selection-start-column="109" selection-end-line="599" selection-end-column="109" />
+          <first_editor relative-caret-position="355">
+            <caret line="673" column="60" lean-forward="false" selection-start-line="673" selection-start-column="60" selection-end-line="673" selection-end-column="60" />
             <folding />
           </first_editor>
           <second_editor />
