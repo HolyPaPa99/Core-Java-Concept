@@ -737,6 +737,14 @@ public class ShapeCache {
 >> * 外观模式（Facade Pattern）
 >> * 享元模式（Flyweight Pattern）
 >> * 代理模式（Proxy Pattern）
+>>>> 在代理模式（Proxy Pattern）中，一个类代表另一个类的功能。这种类型的设计模式属于结构型模式。
+
+>>>> ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/proxy_pattern_uml_diagram.jpg)
+
+>>>> 注意事项： 
+>>>> * 1、和适配器模式的区别：适配器模式主要改变所考虑对象的接口，而代理模式不能改变所代理类的接口。 
+>>>> * 2、和装饰器模式的区别：装饰器模式为了增强功能，而代理模式是为了加以控制。     
+
 
 #### 13.1.3 行为型模式
 这些设计模式特别关注对象之间的通信。
