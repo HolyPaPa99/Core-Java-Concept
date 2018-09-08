@@ -772,6 +772,71 @@ public class ShapeCache {
 >>>> 观察者模式使用三个类 Subject、Observer 和 Client。Subject 对象带有绑定观察者到 Client 对象和从 Client 对象解绑观察者的方法。我们创建 Subject 类、Observer 抽象类和扩展了抽象类 Observer 的实体类。
 
 >>>> ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/observer_pattern_uml_diagram.jpg)
+```$xslt
+import java.util.ArrayList;
+import java.util.List;
+ 
+public class Subject {
+   
+   private List<Observer> observers 
+      = new ArrayList<Observer>();
+   private int state;
+ 
+   public int getState() {
+      return state;
+   }
+ 
+   public void setState(int state) {
+      this.state = state;
+      notifyAllObservers();
+   }
+ 
+   public void attach(Observer observer){
+      observers.add(observer);      
+   }
+ 
+   public void notifyAllObservers(){
+      for (Observer observer : observers) {
+         observer.update();
+      }
+   }  
+}
+
+public abstract class Observer {
+   protected Subject subject;
+   public abstract void update();
+}
+
+public class BinaryObserver extends Observer{
+ 
+   public BinaryObserver(Subject subject){
+      this.subject = subject;
+      this.subject.attach(this);
+   }
+ 
+   @Override
+   public void update() {
+      System.out.println( "Binary String: " 
+      + Integer.toBinaryString( subject.getState() ) ); 
+   }
+}
+
+public class ObserverPatternDemo {
+   public static void main(String[] args) {
+      Subject subject = new Subject();
+ 
+      new HexaObserver(subject);
+      new OctalObserver(subject);
+      new BinaryObserver(subject);
+ 
+      System.out.println("First state change: 15");   
+      subject.setState(15);
+      System.out.println("Second state change: 10");  
+      subject.setState(10);
+   }
+}
+```
+
 
 >> * 状态模式（State Pattern）
 >> * 空对象模式（Null Object Pattern）
