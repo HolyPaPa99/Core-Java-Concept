@@ -592,6 +592,14 @@ J2EE模式（8种）：MVC 模式、业务代表模式、组合实体模式、�
 >>>> ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/P-AbstractFactory-AddProduct.png)
 
 >> * 单例模式（Singleton Pattern）
+>>>> 保证一个类仅有一个实例，并提供一个访问它的全局访问点。
+>>>> 注意：
+>>>> * 1、单例类只能有一个实例。
+>>>> * 2、单例类必须自己创建自己的唯一实例。
+>>>> * 3、单例类必须给所有其他对象提供这一实例。
+>>>> ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/singleton_pattern_uml_diagram.jpg)
+
+
 >> * 建造者模式（Builder Pattern）
 >> * 原型模式（Prototype Pattern）
 
