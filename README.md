@@ -674,6 +674,10 @@ public class Singleton {
 >>>> 这种实现方式还没有被广泛采用，但这是实现单例模式的最佳方法。它更简洁，自动支持序列化机制，绝对防止多次实例化。
 
 >> * 建造者模式（Builder Pattern）
+>>>> 建造者模式（Builder Pattern）使用多个简单的对象一步一步构建成一个复杂的对象。
+
+>>>> ![](https://github.com/HolyPaPa99/Core-Java-Concept/blob/master/images/builder_pattern_uml_diagram.jpg)
+
 >> * 原型模式（Prototype Pattern）
 
 #### 13.1.2 结构型模式
